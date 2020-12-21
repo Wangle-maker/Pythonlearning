@@ -34,15 +34,11 @@ print(mystr2.isdigit())  # 结果：False
 # isalnum()：如果字符串⾄少有⼀个字符并且所有字符都是字⺟或数字则返 回 True,否则返回 False。
 mystr1 = 'aaa12345'
 mystr2 = '12345-'
-
 print(mystr1.isalnum())  # 结果：True
-
 print(mystr2.isalnum())  # 结果：False
 
 # isspace()：如果字符串中只包含空⽩，则返回 True，否则返回 False。
 mystr1 = '1 2 3 4 5'
 mystr2 = ' '
-
 print(mystr1.isspace())  # 结果：False
-
 print(mystr2.isspace())  # 结果：True
