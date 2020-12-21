@@ -76,8 +76,26 @@ print(mystr.lower())  # 结果：hello world and itcast and itheima and python
 mystr = "hello world and itcast and itheima and Python"
 print(mystr.upper())  # 结果：HELLO WORLD AND ITCAST AND ITHEIMA AND PYTHON
 
-
-# lstrip()：删除字符串左侧空⽩字符。
-
-# rstrip()：删除字符串右侧空⽩字符。
+mystr = "     hello world and itcast and itheima and Python     "
+print(mystr)
 # strip()：删除字符串两侧空⽩字符。
+print(mystr.strip())
+# rstrip()：删除字符串右侧空⽩字符。
+print(mystr.rstrip())
+# lstrip()：删除字符串左侧空⽩字符。
+print(mystr.lstrip())
+
+# ljust()：返回⼀个原字符串左对⻬,并使⽤指定字符(默认空格)填充⾄对应⻓度 的新字符串。
+# 语法： 字符串序列.ljust(⻓度, 填充字符)
+mystr = 'hello hello hello'
+print(mystr.ljust(30, '.'))
+print(mystr.ljust(5, '.'))
+# 就是，如果字符长度不够就会用你指定的字符去补齐位数，默认用空格补齐，但是如果你指定的长度达不到原有的字符串的长度，就不会有任何改变，输出原有的字符串。
+# rjust()：返回⼀个原字符串右对⻬,并使⽤指定字符(默认空格)填充⾄对应⻓度 的新字符串，语法和ljust()相同。
+mystr = 'hello hello hello'
+print(mystr.rjust(30, '.'))
+print(mystr.rjust(5, '.'))
+# center()：返回⼀个原字符串居中对⻬,并使⽤指定字符(默认空格)填充⾄对应⻓度 的新字符串，语法和ljust()相同。
+mystr = 'hello hello hello'
+print(mystr.center(30, '.'))
+print(mystr.center(5, '.'))
