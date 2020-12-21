@@ -99,3 +99,4 @@ print(mystr.rjust(5, '.'))
 mystr = 'hello hello hello'
 print(mystr.center(30, '.'))
 print(mystr.center(5, '.'))
+
