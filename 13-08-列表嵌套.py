@@ -16,7 +16,7 @@ while i < len(name_list):
     i += 1
 
 
-# 第⼀步：按下标查找到李四所在的列表
-print(name_list[2])
-# 第⼆步：从李四所在的列表⾥⾯，再按下标找到数据李四
-print(name_list[2][1])
+# # 第⼀步：按下标查找到李四所在的列表
+# print(name_list[2])
+# # 第⼆步：从李四所在的列表⾥⾯，再按下标找到数据李四
+# print(name_list[2][1])
