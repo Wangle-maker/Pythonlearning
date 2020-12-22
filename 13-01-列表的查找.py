@@ -34,3 +34,12 @@ print(name_list[2])  # Rose
 # 语法：列表序列.index(数据, 开始位置下标, 结束位置下标)
 name_list = ['Tom', 'Lily', 'Rose']
 print(name_list.index('Lily', 0, 2))  # 1
+# 注意：如果查找的数据不存在则报错。
+
+# count()：统计指定数据在当前列表中出现的次数。
+name_list = ['Tom', 'Lily', 'Rose']
+print(name_list.count('Lily'))  # 1
+
+# len()：访问列表⻓度，即列表中数据的个数。
+name_list = ['Tom', 'Lily', 'Rose']
+print(len(name_list))  # 3
