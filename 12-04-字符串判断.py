@@ -42,3 +42,23 @@ mystr1 = '1 2 3 4 5'
 mystr2 = ' '
 print(mystr1.isspace())  # 结果：False
 print(mystr2.isspace())  # 结果：True
+
+mystr = input('请输入字符串：')
+print(mystr.count('and'))  # 3
+print(mystr.count('and'))  # 3
+print(mystr.count('and'))  # 3
+
+
+shuzi = 0
+zimu = 0
+qita = 0
+mystr = input('请输入字符串：')
+for i in mystr:
+    if i.isalpha():
+        zimu += 1
+    elif i.isdigit():
+        shuzi += 1
+    else:
+        qita += 1
+print(f'数字有{shuzi}个，字母有{zimu}个，其他字符{qita}个')
+
