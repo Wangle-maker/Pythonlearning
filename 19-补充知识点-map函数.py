@@ -16,7 +16,7 @@
 # python中的输入raw_input只能读入一个数，但
 # 是有时候需要读入多个数，我们该怎么办呢，读两个数可以使用两个raw_input，但是我们如果需要读取十个数怎么办，不能使用十个raw_nput 吧。
 import sys
-num1, num2 = map(int, sys.stdin.readline().split())
+num1, num2 = map(int, sys.stdin.readline().split())  # 它主要是切割字符串，结果返回由字符串元素组成的一个列表，具体怎么使用看下面的代码。
 print(num1, num2)
 # 如果需要理解上面的代码我们需要知道map函数的用法和作用，懂了之后再看下面的代码简直就是so easy啊。
 
