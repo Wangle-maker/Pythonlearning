@@ -41,8 +41,8 @@ def zengjia():
         elif x == 3:
             zengjia_dict['宿舍号'] = input('请输入学员宿舍号信息:')
         x += 1
-    xinxi_list.append(zengjia_dict)
-    print(xinxi_list)
+    xinxi.append(zengjia_dict)
+    print(xinxi)
 
 
 # for a in range(len(xinxi_list)):
@@ -52,29 +52,36 @@ def zengjia():
 def panduan():
     """判断学学员信息是否存在"""
     j = 0
-    for i in range(0, len(xinxi_list)):
-        if b not in xinxi_list[i]:
+    for i in range(0, len(xinxi)):
+        if b not in xinxi[i].values():
             j += 1
         i += 1
-    print(f'{j}')
-    return j
+    if j < len(xinxi):
+        return 1
+    else:
+        return 0
 
 
 def shanchu():
     """删除学员函数"""
+    for i in range(0, len(xinxi)):
+        if b in xinxi[i].values():
+            del xinxi[i]
+            break
+        else:
+            i += 1
 
 
 chushihua()  # 输入指令，判断，并执行相应动作
 zhiling = int(input('您要进行的指令是：'))  # 输入的指令都是str类型，但是需要的是int类型，用类型转换函数转换成需要的类型
-xinxi_list = []  # 创建空列表用来存储学员信息，信息包括姓名，学号，宿舍号。
+xinxi = [{'姓名': '11', '学号': '11', '宿舍号': '11'}, {'姓名': '111', '学号': '111', '宿舍号': '111'}, {'姓名': '1111', '学号': '1111', '宿舍号': '1111'}]  # 创建空列表用来存储学员信息，信息包括姓名，学号，宿舍号。
 
 # 用while循环来执行操作
 while 1:
     """增加学员信息函数"""
     if zhiling == 1:
         b = input('请输入学员信息，来判断学员信息是否存在：')
-        panduan()
-        if j < len(xinxi_list):
+        if panduan():
             print('学员信息已经存在')
         else:
             print('学员信息不存在，请继续操作来添加学员信息')
@@ -94,11 +101,33 @@ while 1:
 
     """删除学员信息函数"""
     if zhiling == 2:
-        b = input('请输入学员信息，来判断学员信息是否存在：')
-        panduan()
-        if j < len(xinxi_list):
-            print('学员信息存在,可以执行删除指令')
-            shanchu()
+        b = input('请输入学员的学号信息，来判断学员信息是否存在：')
+        if panduan():
+            print('学员信息存在,是否确认执行删除指令')
+            if input('1或0进行选择，1是确认，0是取消:'):
+                shanchu()
+                print(xinxi)
+                print('学员信息已经删除')
+                print('是否还需要删除学员信息？')
+                print('1 = 继续删除')
+                print('2 = 停止删除，返回主菜单')
+                caozuo = int(input('请输入1或2来执行相应操作:'))
+                if caozuo == 1:
+                    zhiling = 2
+                elif caozuo == 2:
+                    chushihua()
+                    zhiling = int(input('您要进行的指令是：'))
+                else:
+                    print('输入错误，请重新输入')
+                    continue
+            else:
+                zhiling = 2
         else:
-            print('学员信息不存在，请确认学员信息后再操作')
+            print('学员信息不存在，请确认学员信息后再操作或返回主菜单')
+            if input('1或0进行选择，1是重新输入，0是返回主菜单:'):
+                zhiling = 2
+            else:
+                chushihua()
+                zhiling = int(input('您要进行的指令是：'))
 
+    """修改学员信息函数"""
