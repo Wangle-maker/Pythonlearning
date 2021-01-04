@@ -91,12 +91,17 @@ def chaxun():
 def xianshi():
     """显示学员信息函数（显示全部学员信息）"""
     for key in xinxi[0].keys():
-        print(key, end='\t\t\t')
+        print(key, end='\t\t\t\t\t')
     print()
     for i in range(0, len(xinxi)):
-        for j in xinxi[i].values():
-            print(j, end='\t\t\t')
-        print()
+        if i < 2:
+            for j in xinxi[i].values():
+                print(j, end='\t\t\t\t\t')
+            print()
+        else:
+            for j in xinxi[i].values():
+                print(j, end='\t\t\t')
+            print()
 
 
 chushihua()  # 输入指令，判断，并执行相应动作
